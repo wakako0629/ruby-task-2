@@ -1,0 +1,31 @@
+<body>
+  <section class="main-header">
+    <%= image_tag('achieve.png') %>
+  </section>
+
+    <section class="about">
+    <h1>About TwitteClone</h1>
+    <p>
+      sample
+    </p>
+  </section>
+
+<h1>つぶやき一覧</h1>
+<p><%= notice %></p>
+
+<div class="container">
+  <div class="row">
+    <% @words.each do |word| %>
+      <div class="col-xs-12 col-md-6 word-panel">
+        <p><%= word.content %></p>
+        <div class="word-links">
+          <%= link_to 'Show', word, class: 'btn btn-default' %>
+          <%= link_to 'Edit', edit_word_path(word), class: 'btn btn-info' %> |
+          <%= link_to 'Destroy', word, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+  
+  </body>
