@@ -10,10 +10,11 @@
       </ul>
     </div>
   <% end %>
-
+  <div class="word_writer">
+    <p>投稿者: <%= form.text_field :writer %></p>
+  </div>
   <div class="word_title">
-    <%= form.label :content %>
-    <%= form.text_field :content %>
+    <p>つぶやき: <%= form.text_field :content %></p>
   </div>
   <%= form.submit "つぶやく" %>
 <% end %>

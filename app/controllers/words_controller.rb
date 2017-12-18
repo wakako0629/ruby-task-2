@@ -3,7 +3,7 @@ class WordsController < ApplicationController
   before_action :set_word, only: [:show, :edit, :update, :destroy] 
   
   def index
-    @words = Word.all
+    @words = Word.all.order(id: :desc)
   end
   
   def new
@@ -52,7 +52,7 @@ class WordsController < ApplicationController
   
   private
   def word_params
-    params.require(:word).permit(:content)
+    params.require(:word).permit(:content,:writer)
   end
   
   def set_word
