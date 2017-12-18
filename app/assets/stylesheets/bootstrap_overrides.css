@@ -14,3 +14,11 @@
   color: white;
 }
 
+
+.dropdown-menu{
+z-index: 999;
+}
+
+.table{
+    z-index: 500;
+}
